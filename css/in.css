@@ -1,0 +1,38 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color: #76a9f5;
+    background: rgb(0, 0, 0, .7);
+    width: 360px;
+    height: 400px;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    border-radius: 15px;
+}
+
+form input {
+    border: 3.5px solid #76a9f5;
+}
+
+h2 p {
+    color: #76a9f5;
+    font-size: xx-large;
+}
+
+.sub,
+.clear {
+    color: blue;
+    background-color: #76a9f5;
+    text-decoration: none;
+    border: 2px solid blueviolet;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: aqua;
+}

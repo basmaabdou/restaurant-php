@@ -1,0 +1,50 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    color: #76a9f5;
+    font-size: xx-large;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    text-align: center;
+}
+
+h1 img {
+    height: 40px;
+    width: 40px;
+}
+
+h2 {
+    color: #76a9f5;
+    color: white;
+}
+
+.form {
+    color: white;
+    background: rgb(0, 0, 0, .5);
+    width: 300px;
+    height: 720px;
+    position: absolute;
+    top: 15;
+    left: 2%;
+    border-radius: 15px;
+    padding-left: 2%;
+}
+
+.sub,
+.clear {
+    color: white;
+    background-color: grey;
+    padding: .5%;
+    text-decoration: none;
+    width: 20%;
+    height: 4%;
+}
+
+a:hover {
+    color: aqua;
+}
