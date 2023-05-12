@@ -14,9 +14,7 @@
     <div class="container-fluid">
         <div style="background-color: antiquewhite;">
             <?php include('includes/header.php') ?>
-
             <img class="photo" src="photo/16.jpeg" width="100%" height="500px">
-
             <center>
                 <h1>All Kinds Of Coffe</h1>
             </center><br>
