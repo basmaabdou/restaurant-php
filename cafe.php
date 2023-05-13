@@ -17,7 +17,7 @@
             <?php include('includes/header.php') ?>
             <img class="photo" src="photo/16.jpeg" width="100%" height="500px">
             <center>
-                <h1>All Kinds Of Coffe</h1>
+                <h1>All Kinds Of Coffee</h1>
             </center><br>
 
             <?php foreach ($coffee as $row){?>

@@ -23,7 +23,9 @@
             <select name="type" required>
                 <option value="coffee">Coffee</option>
                 <option value="dessert">Dessert</option>
-                <option value="sandwitch">Sandwitch</option>
+                <option value="meat">Meat Burger</option>
+                <option value="sauce">Sauce</option>
+                <option value="checken">Checken Burger</option>
             </select><br><br>
             <input type="file" name="image"><br><br>
             <input type="submit" value="Save">
@@ -32,15 +34,7 @@
     
 
     </center>
-    <?php 
-        foreach ($all as $row) {
-              echo "<tr>";
-                 echo "<td>" . $row["price"] ."&nbsp &nbsp ". "</td>" ;
-                 echo "<td>" . $row["title"] ."&nbsp". "</td>";
-                 echo "<td><img src='" . $row["image"] . "'></td>"."<br>";
-                 echo "</tr>" ;
-        }
-    ?>
+   
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the form data
