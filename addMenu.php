@@ -19,22 +19,23 @@
 
             <label>Price:</label>
             <input type="number" step="0.01" required name="price"><br><br>
-            <label>type:</label>
+            <label>Type:</label>
             <select name="type" required>
                 <option value="coffee">Coffee</option>
-                <option value="dessert">Dessert</option>
-                <option value="meat">Meat Burger</option>
-                <option value="sauce">Sauce</option>
                 <option value="checken">Checken Burger</option>
+                <option value="meat">Meat Burger</option>
+                <option value="dessert">Dessert</option> 
+                <option value="sauce">Sauce</option> 
             </select><br><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             <input type="file" name="image"><br><br>
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" style="font-size: 20px;">
         </form>
 
     
 
     </center>
-   
+    
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the form data

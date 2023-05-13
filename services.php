@@ -1,4 +1,4 @@
-<?php ?>
+<?php require('./includes/server.php');?>
 
 <head>
     <meta charset="UTF-8">

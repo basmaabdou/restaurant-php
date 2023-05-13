@@ -1,4 +1,4 @@
-<?php ?>
+<?php require('./includes/server.php');?>
 <html>
 
 <head>
@@ -17,20 +17,16 @@
             <center>
                 <h1>Burger Meat Menue</h1>
             </center><br>
-            <div class="row">
-                <div class="col-3"><img src="photo/burger.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3"> burger-mac </div>
-                </h1>
-                <div class="col-3">50 lE</div>
-                <div class="col-3"></div>
-            </div><br>
 
-            <div class="row">
-                <div class="col-3"><img src="photo/macroyal.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3">McRoyal </div>
-                </h1>
+            <?php foreach ($meat as $row){?>
+            <div class="row">  
+                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>" width="300px"></div>
+                <table>
+                    <tr>
+                        <th>
+                            <h1>
+                                <div class="col-lg-4"><?php echo $row['title'] ?></div>
+                            </h1>
                         </th>
                     </tr>
                     <tr>
@@ -42,53 +38,6 @@
             </div> <br>
             <?php } ?>
            
-            </div><br>
-            <div class="row">
-                <div class="col-3"><img src="photo/double.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3">macdouble </div>
-                </h1>
-                <div class="col-3">75 lE</div>
-                <div class="col-3"></div>
-
-            </div><br>
-            <div class="row">
-                <div class="col-3"><img src="photo/bigta.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3">double-bigtasty </div>
-                </h1>
-                <div class="col-3">155 $</div>
-                <div class="col-3"></div>
-
-            </div><br>
-            <div class="row">
-                <div class="col-3"><img src="photo/mc.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3">Double-McRoyal</div>
-                </h1>
-                <div class="col-3">90 $</div>
-                <div class="col-3"></div>
-
-            </div><br>
-
-            <div class="row">
-                <div class="col-3"><img src="photo/beef.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3"> Beefburger </div>
-                </h1>
-                <div class="col-3">100 $</div>
-                <div class="col-3"></div>
-
-            </div><br>
-            <div class="row">
-                <div class="col-3"><img src="photo/cheese.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3"> cheese-burger </div>
-                </h1>
-                <div class="col-3">75 $</div>
-                <div class="col-3"></div>
-
-            </div><br>
             <div class="row">
                 <div class="col-3">
                     <h1>Contact With Us:</h1>

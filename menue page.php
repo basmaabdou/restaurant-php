@@ -59,7 +59,7 @@ $sql = "CREATE TABLE menu (
                 </div>
 
                 <div class="col-md-3  text-center">
-                    <a href="souce.php"> <img src="photo/40.jfif" class="menu-Img" />
+                    <a href="souce.php"> <img src="photo/souces.jpeg" class="menu-Img" />
                         <h1>
                             <div> sauce </div>
                         </h1>

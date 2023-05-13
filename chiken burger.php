@@ -1,4 +1,4 @@
-<?php ?>
+<?php require('./includes/server.php');?>
 <html>
 
 <head>
@@ -19,102 +19,21 @@
                 <h1> Chicken Sandwiches</h1>
             </center>
 
-
-            <table>
+             <?php foreach ($checken as $row){?>
+            <div class="row">  
+               <table>
                 <tr>
-                    <td> <img src="photo/burger.jfif" width="400px" height="200px" /></td><br>
+                    <td> <img src="<?php echo $row['image'] ?>" width="400px" height="200px" /></td>
                     <td>
                         <div class="d1">
-                            <center>
-                                <h2>Mc Chicken</h2>
-                                <h4>price 155$</h4>
-                            </center>
+                                <h2><?php echo $row['title'] ?></h2>
+                                <h4><?php echo $row['price'] ?>$</h4>
                         </div>
                     </td>
                 </tr>
-
-                <tr>
-                    <td> <img src="photo/Big-tasty-Chicken.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Big-tasty chicken</h2>
-                                <h4>price 205$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Grand-Chicken-Spicy.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Chicken-spicy</h2>
-                                <h4>price 205$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Chicken-Fillet-Spicy.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Chicken-fillet-spicy</h2>
-                                <h4>price 115$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Chicken-MACDO-Spicy.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Chicken-macdo-spicy</h2>
-                                <h4>price 80$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Chicken-MACDO.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1" height="150px" width="500px" float="left">
-                            <center>
-                                <h2>Chicken-macdo</h2<h4>price 90$</h4>>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Chicken-MACDO-Deluxe-Spicy.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Chicken-macdo-deluxe-spicy</h2>
-                                <h4>price 155$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Double-FOF.png" width="400px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Double FOF</h2>
-                                <h4>price 1205$</h4>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
+               </table>
+<?php } ?>
+             
 
             <div class="row">
                 <div class="col-3">

@@ -23,11 +23,19 @@
     $deserts = $deserts_result->fetch_all(MYSQLI_ASSOC);
 
 
-    $sandwitch_query = "SELECT price , title , image FROM menu WHERE type = 'sandwitch'";
-    $sandwitch_result = $conn->query($sandwitch_query);
-    $sandwitch = $sandwitch_result->fetch_all(MYSQLI_ASSOC);
-
     $coffee_query = "SELECT price , title , image FROM menu WHERE type = 'coffee'";
     $coffee_result = $conn->query($coffee_query);
     $coffee = $coffee_result->fetch_all(MYSQLI_ASSOC);
+
+    $meat_query = "SELECT price , title , image FROM menu WHERE type = 'meat'";
+    $meat_result = $conn->query($meat_query);
+    $meat = $meat_result->fetch_all(MYSQLI_ASSOC);
+
+    $checken_query = "SELECT price , title , image FROM menu WHERE type = 'checken'";
+    $checken_result = $conn->query($checken_query);
+    $checken = $checken_result->fetch_all(MYSQLI_ASSOC);
+
+    $sauce_query = "SELECT price , title , image FROM menu WHERE type = 'sauce'";
+    $sauce_result = $conn->query($sauce_query);
+    $sauce = $sauce_result->fetch_all(MYSQLI_ASSOC);
  ?>

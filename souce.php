@@ -1,4 +1,4 @@
-<?php ?>
+<?php require('./includes/server.php');?>
 <html lang="en">
 
 <head>
@@ -13,191 +13,35 @@
 </head>
 
 <body>
+<?php include('includes/header.php') ?>
     <div class="container-fluid">
         <div style="background-color: antiquewhite;">
 
-            <img class="photo" src="photo/40.jfif" width="100%" height="500px">
+            <img class="photo" src="photo/souces.jpeg" width="100%" height="500px">
             <center>
                 <h1>Souce Additives</h1>
             </center><br>
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/k.jfif" width="300px"></div>
+
+            <?php foreach ($sauce as $row){?>
+            <div class="row">  
+                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>" width="300px"></div>
                 <table>
                     <tr>
                         <th>
                             <h1>
-                                <div class="col-lg-4">KATSHAB</div>
+                                <div class="col-lg-4"><?php echo $row['title'] ?></div>
                             </h1>
                         </th>
                     </tr>
                     <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of tomatos</div>
-                        </th>
-                    </tr>
-                    <tr>
                         <th>
-                            <div class="col-lg-4">PRICE 10$</div>
+                            <div class="col-lg-4">PRICE <?php echo $row['price'] ?>$</div>
                         </th>
                     </tr>
                 </table>
             </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/mau.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">MAYONNAIS</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of oil, egg</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 12$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/ba.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">BBQ</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made ofvinegar, tomato </div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 15$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/m.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">MASTERD</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of musterd seeds</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 15$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/s.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">SWEETANDSAWER</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of sweet and sour compenant</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 20$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/t.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">TARATAR</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of mayonnaise, pickles, capers and lemon juic</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 25$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/ti.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">TAHINI</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of sesame seeds</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 25$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"><img src="photo/big.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">BIGTASTY</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">
-                            <div class="col-lg-4"> made of mayonnaise,ketchup, mustard and vegetable oil.</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 30$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+            <?php } ?>
+            
     <div class="row">
         <div class="col-3">
             <h1>Contact With Us:</h1>

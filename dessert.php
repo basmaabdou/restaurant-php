@@ -1,4 +1,4 @@
-<?php ?>
+<?php require('./includes/server.php'); ?>
 <html>
 
 <head>
@@ -18,78 +18,28 @@
             <center>
                 <h1>Desert</h1>
             </center>
-            <table>
-                <tr>
-                    <td> <img src="photo/Apple-Pie.png" width="350px" height="200px"></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Apple-pie</h2>
-                                <h5> price 15$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Caramel.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Caramel</h2>
-                                <h5>price 20$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Chocolate.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Chocolate</h2>
-                                <h5>price 30$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Cone.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Cone</h2>
-                                <h5>price 25$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Oreo.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Oreo</h2>
-                                <h5>price 25$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> <img src="photo/Pie-190x190.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>Pie</h2>
-                                <h5>price 15$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr>
+            <?php foreach ($deserts as $row){?>
+            <div class="row">  
+                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>"  height="300px width="300px"></div>
+                <table>
+                    <tr>
+                        <th>
+                            <h1>
+                                <div class="col-lg-4"><?php echo $row['title'] ?></div>
+                            </h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="col-lg-4">PRICE <?php echo $row['price'] ?>$</div>
+                        </th>
+                    </tr>
+                </table>
+            </div> <br>
+            <?php } ?>
+            <!-- <table> -->
+                <!-- 
+              
 
                 <tr>
                     <td> <img src="photo/Straw.png" width="350px" height="200px" /></td>
@@ -101,8 +51,8 @@
                             </center>
                         </div>
                     </td>
-                </tr>
-            </table>
+                </tr> -->
+            <!-- </table> -->
             <div class="row">
                 <div class="col-3">
                     <h1>Contact With Us:</h1>
