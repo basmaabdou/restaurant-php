@@ -31,19 +31,17 @@
                 <h1>
                     <div class="col-3">McRoyal </div>
                 </h1>
-                <div class="col-3">100 lE</div>
-                <div class="col-3"></div>
-
-            </div><br>
-
-            <div class="row">
-                <div class="col-3"><img src="photo/bigmac.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3">bigmac </div>
-                </h1>
-                <div class="col-3">125 lE</div>
-                <div class="col-3"></div>
-
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="col-lg-4">PRICE <?php echo $row['price'] ?>$</div>
+                        </th>
+                    </tr>
+                </table>
+            </div> <br>
+            <?php } ?>
+           
             </div><br>
             <div class="row">
                 <div class="col-3"><img src="photo/double.jfif" width="100%"></div>
