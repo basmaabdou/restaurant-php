@@ -9,7 +9,7 @@
             <li><a href="offers menue.php">offers</a></li>
             <li><a href="services.php">Services</a></li>
             <li><a href="sign in.php">Login</a></li>
-            <li><a href="sign up.php">Login</a></li>
+            <li><a href="sign up.php">LogUp</a></li>
         </ul>
     </nav>
 </header>

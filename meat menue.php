@@ -92,15 +92,6 @@
 
             </div><br>
             <div class="row">
-                <div class="col-3"><img src="photo/tra.jfif" width="100%"></div>
-                <h1>
-                    <div class="col-3"> trepale-mac </div>
-                </h1>
-                <div class="col-3"> 150$</div>
-                <div class="col-3"></div>
-
-            </div><br>
-            <div class="row">
                 <div class="col-3">
                     <h1>Contact With Us:</h1>
                 </div>
@@ -116,6 +107,9 @@
                     <a href="https:/www.instagram.com" role="button" target="_blank"><img src="photo/21.png"
                             width="50px" height="50px"></a>
                 </div><br>
+                <a href="addMenu.php" role="button" target="_blank" style="font-size: 30px; width: 80px;">Add</a>
+                <a href="" role="button" target="_blank" style=" font-size: 30px;  width: 130px;">Update</a>
+                <a href="" role="button" target="_blank" style=" font-size: 30px;">Delete</a>
             </div>
 
 </body>

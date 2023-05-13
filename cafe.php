@@ -1,5 +1,6 @@
 <?php ?>
 <html>
+<?php require('./includes/server.php'); ?>
 
 <head>
     <meta charset="utf-8">
@@ -18,128 +19,27 @@
             <center>
                 <h1>All Kinds Of Coffe</h1>
             </center><br>
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/coffe.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Coffe</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 15$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
 
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/ca.jfif" width="300px"></div>
+            <?php foreach ($coffee as $row){?>
+            <div class="row">  
+                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>" width="300px"></div>
                 <table>
                     <tr>
                         <th>
                             <h1>
-                                <div class="col-lg-4">Amricano</div>
+                                <div class="col-lg-4"><?php echo $row['title'] ?></div>
                             </h1>
                         </th>
                     </tr>
                     <tr>
                         <th>
-                            <div class="col-lg-4">PRICE 20$</div>
+                            <div class="col-lg-4">PRICE <?php echo $row['price'] ?>$</div>
                         </th>
                     </tr>
                 </table>
             </div> <br>
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/espresso.jpeg" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Expresso</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 20$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/cap.jpeg" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Captino</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 25$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/amricano.jpeg" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Latih</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 30$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/tea.jfif" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Tea</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 10$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
-            <div class="row">
-                <div class="col-lg-4"> <img src="photo/ice.png" width="300px"></div>
-                <table>
-                    <tr>
-                        <th>
-                            <h1>
-                                <div class="col-lg-4">Icedlatte</div>
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <div class="col-lg-4">PRICE 25$</div>
-                        </th>
-                    </tr>
-                </table>
-            </div> <br>
+            <?php } ?>
+            
             <div class="row">
                 <div class="col-3">
                     <h1>Contact With Us:</h1>
@@ -156,6 +56,9 @@
                     <a href="https:/www.instagram.com" role="button" target="_blank"><img src="photo/21.png"
                             width="50px" height="50px"></a>
                 </div><br>
+                <a href="addMenu.php" role="button" target="_blank" style="font-size: 30px; width: 80px;">Add</a>
+                <a href="" role="button" target="_blank" style=" font-size: 30px;  width: 130px;">Update</a>
+                <a href="" role="button" target="_blank" style=" font-size: 30px;">Delete</a>
             </div>
 </body>
 

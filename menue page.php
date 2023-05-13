@@ -1,4 +1,14 @@
-<?php ?>
+<?php 
+require('./includes/server.php');
+$sql_create_db = "CREATE DATABASE restaurant";
+mysqli_select_db($conn, "restaurant");
+// Create table
+// Create table
+$sql = "CREATE TABLE menu (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    )";
+
+?>
 <html>
 
 <head>
@@ -61,7 +71,7 @@
                 <div class="col-md-3  text-center">
                     <a href="dessert.php"> <img src="photo/d2.jpg" class="menu-Img" />
                         <h1>
-                            <div> Deserts</div>
+                            <div> Desserts</div>
                         </h1>
                     </a>
                 </div>
@@ -75,6 +85,9 @@
             <a href="https://ar-ar.facebook.com/enespanol/" role="button" target="_blank"><img src="photo/19.png"></a>
             <a href="https:/www.twitter.com" role="button" target="_blank"><img src="photo/18.png"></a>
             <a href="https://www.instagram.com/" role="button" target="_blank"><img src="photo/21.png"></a>
+            <a href="addMenu.php" role="button" target="_blank">Add</a>
+            <a href="" role="button" target="_blank">Update</a>
+            <a href="" role="button" target="_blank">Delete</a>
         </div>
     </footer>
 </body>

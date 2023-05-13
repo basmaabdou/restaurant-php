@@ -192,7 +192,6 @@
                 <div class="col-3">
                     <h1>Contact With Us:</h1>
                 </div>
-                <div></div>
                 <div class="col-1">
                     <a href="https://ar-ar.facebook.com/enespanol/" target="_blank"><img src="photo/19.png" width="50px"
                             height="50px"></a>
@@ -205,7 +204,13 @@
                     <a href="https:/www.instagram.com" role="button" target="_blank"><img src="photo/21.png"
                             width="50px" height="50px"></a>
                 </div><br>
+                <div> <a href="addMenu.php" role="button" target="_blank" style="font-size: 30px; width: 80px;">Add</a>
+                    <a href="" role="button" target="_blank" style=" font-size: 30px;  width: 130px;">Update</a>
+                    <a href="" role="button" target="_blank" style=" font-size: 30px;">Delete</a>
+                </div>
             </div>
+
+
 </body>
 
 </html>
