@@ -34,33 +34,32 @@
 </html>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-//     $salt = base64_encode(random_bytes(32));
-// // Hash the password using the bcrypt algorithm
-// $hashed_password = password_hash($password, PASSWORD_BCRYPT, ['salt' => $salt]);
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-$sql = "UPDATE users SET password='$hashed_password' WHERE name='$name'";
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $encoded_password = base64_encode($password);
+if (empty($name) || empty($encoded_password) || empty($email)) {
+        die('Please enter both a name and encoded_password');
+        }
 
-if (mysqli_query($conn, $sql)) {
-    // echo $hashed_password;
-} else {
-    echo "Error updating password: " . mysqli_error($conn);
-}
+        // Sanitize user input
+        $name = mysqli_real_escape_string($conn, $name);
+        $email = mysqli_real_escape_string($conn, $email);
+        $encoded_password = mysqli_real_escape_string($conn, $encoded_password);
 
-    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $hashed_password);
-    
-    if ($stmt->execute() === TRUE) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: " . $stmt->error;
+
+        // Prepare and execute SQL query
+        $sql = "INSERT INTO users (name,email,password) VALUES ('$name','$email','$encoded_password')";
+
+        if ($conn->query($sql) === TRUE) {
+        echo "Data inserted successfully";
+        } else {
+        echo "Error: " . $sql . "<br>" ;
+        }
+
+        $conn->close();
     }
-
-    $stmt->close();
-    $conn->close();
-    
-}
-
 ?>
+
+
+
