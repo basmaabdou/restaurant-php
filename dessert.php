@@ -20,7 +20,7 @@
             </center>
             <?php foreach ($deserts as $row){?>
             <div class="row">  
-                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>"  height="300px width="300px"></div>
+                <div class="col-lg-4"> <img src="<?php echo $row['image'] ?>"  height="300px" width="300px"></div>
                 <table>
                     <tr>
                         <th>
@@ -31,28 +31,12 @@
                     </tr>
                     <tr>
                         <th>
-                            <div class="col-lg-4">PRICE <?php echo $row['price'] ?>$</div>
+                            <div class="col-lg-4">PRICE <?php echo $row['desc'] ?>$</div>
                         </th>
                     </tr>
                 </table>
             </div> <br>
             <?php } ?>
-            <!-- <table> -->
-                <!-- 
-              
-
-                <tr>
-                    <td> <img src="photo/Straw.png" width="350px" height="200px" /></td>
-                    <td>
-                        <div class="d1">
-                            <center>
-                                <h2>strawbary</h2>
-                                <h5>price 20$</h5>
-                            </center>
-                        </div>
-                    </td>
-                </tr> -->
-            <!-- </table> -->
             <div class="row">
                 <div class="col-3">
                     <h1>Contact With Us:</h1>
@@ -69,9 +53,9 @@
                     <a href="https:/www.instagram.com" role="button" target="_blank"><img src="photo/21.png"
                             width="50px" height="50px"></a>
                 </div><br>
-                <a href="addMenu.php" role="button" target="_blank" style="font-size: 30px; width: 80px;">Add</a>
-                <a href="" role="button" target="_blank" style=" font-size: 30px;  width: 130px;">Update</a>
-                <a href="" role="button" target="_blank" style=" font-size: 30px;">Delete</a>
+                <a href="addMenu.php" role="button" target="_self" style="font-size: 30px; width: 80px;">Add</a>
+                <a href="updateMenu.php" role="button" target="_self" style=" font-size: 30px;  width: 130px;">Update</a>
+                <a href="deleteMenu.php" role="button" target="_self" style=" font-size: 30px;">Delete</a>
             </div>
 </body>
 

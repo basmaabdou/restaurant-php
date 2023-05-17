@@ -38,4 +38,16 @@
     $sauce_query = "SELECT price , title , image FROM menu WHERE type = 'sauce'";
     $sauce_result = $conn->query($sauce_query);
     $sauce = $sauce_result->fetch_all(MYSQLI_ASSOC);
+
+
+
+    //update
+    // $all_query_update = "UPDATE price , title , image FROM menu";
+    // $all_result_update = $conn->query($all_query);
+    // $all_update = $all_result->fetch_all(MYSQLI_ASSOC);
+
+    // $coffee_query_update = "UPDATE price , title , image FROM menu WHERE type = 'coffee'";
+    // $coffee_result_update = $conn->query($coffee_query);
+    // $coffee_update = $coffee_result->fetch_all(MYSQLI_ASSOC);
+
  ?>

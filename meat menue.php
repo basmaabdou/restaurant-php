@@ -54,9 +54,9 @@
                     <a href="https:/www.instagram.com" role="button" target="_blank"><img src="photo/21.png"
                             width="50px" height="50px"></a>
                 </div><br>
-                <a href="addMenu.php" role="button" target="_blank" style="font-size: 30px; width: 80px;">Add</a>
-                <a href="" role="button" target="_blank" style=" font-size: 30px;  width: 130px;">Update</a>
-                <a href="" role="button" target="_blank" style=" font-size: 30px;">Delete</a>
+                <a href="addMenu.php" role="button" target="_self" style="font-size: 30px; width: 80px;">Add</a>
+                <a href="updateMenu.php" role="button" target="_self" style=" font-size: 30px;  width: 130px;">Update</a>
+                <a href="deleteMenu.php" role="button" target="_self" style=" font-size: 30px;">Delete</a>
             </div>
 
 </body>

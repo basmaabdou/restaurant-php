@@ -2,8 +2,6 @@
 require('./includes/server.php');
 $sql_create_db = "CREATE DATABASE restaurant";
 mysqli_select_db($conn, "restaurant");
-// Create table
-// Create table
 $sql = "CREATE TABLE menu (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
     )";
@@ -25,9 +23,6 @@ $sql = "CREATE TABLE menu (
     <br>
     <div class="container-fluid">
         <div>
-
-
-
             <center>
                 <h1> Our Menue</h1><br><br>
             </center>
@@ -41,19 +36,20 @@ $sql = "CREATE TABLE menu (
                     </a><br>
                 </div>
 
+               
                 <div class="col-md-3  text-center">
-                    <a href="meat menue.php"> <img src="photo/25.jfif" class="menu-Img" />
-
+                    <a href="chiken burger.php"> <img src="photo/23.jpg" class="menu-Img" />
                         <h1>
-                            <div>Meats </div>
+                            <div>Chickens </div>
                         </h1>
                     </a>
                 </div>
 
                 <div class="col-md-3  text-center">
-                    <a href="chiken burger.php"> <img src="photo/23.jpg" class="menu-Img" />
+                    <a href="meat menue.php"> <img src="photo/25.jfif" class="menu-Img" />
+
                         <h1>
-                            <div>Chickens </div>
+                            <div>Meats </div>
                         </h1>
                     </a>
                 </div>
@@ -85,9 +81,9 @@ $sql = "CREATE TABLE menu (
             <a href="https://ar-ar.facebook.com/enespanol/" role="button" target="_blank"><img src="photo/19.png"></a>
             <a href="https:/www.twitter.com" role="button" target="_blank"><img src="photo/18.png"></a>
             <a href="https://www.instagram.com/" role="button" target="_blank"><img src="photo/21.png"></a>
-            <a href="addMenu.php" role="button" target="_blank">Add</a>
-            <a href="" role="button" target="_blank">Update</a>
-            <a href="" role="button" target="_blank">Delete</a>
+            <a href="addMenu.php" role="button" target="_self">Add</a>
+            <a href="updateMenu.php" role="button" target="_self">Update</a>
+            <a href="deleteMenu.php" role="button" target="_self">Delete</a>
         </div>
     </footer>
 </body>

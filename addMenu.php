@@ -5,37 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/css/bootstrap.min.css"> -->
-
-    <title>Document</title>
+    <link rel="stylesheet" href="css/new.css">
 </head>
-<body style="background-color: #ead8c1;">
+<body style=" background-image: url('photo/download5.jpeg');">
     <center>
-        <a style="color:grey;font-size: 70px;"> Add New Item</a><br><br><br><br><br><br>
+       <br><br> <a style="color:bisque;font-size: 70px;"> Add New Item</a><br><br><br><br><br><br><br>
         <form method="post" style="font-size: 30px;" enctype="multipart/form-data">
 
-            <label>Title:</label>
+            <label>Title:</label><br>
             <input type="text" class="form-control" name="title" required><br><br>
 
-            <label>Price:</label>
+            <label>Price:</label><br>
             <input type="number" step="0.01" required name="price"><br><br>
-            <label>Type:</label>
+            <label>Type:</label><br>
             <select name="type" required>
                 <option value="coffee">Coffee</option>
                 <option value="checken">Checken Burger</option>
                 <option value="meat">Meat Burger</option>
                 <option value="dessert">Dessert</option> 
                 <option value="sauce">Sauce</option> 
-            </select><br><br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <input type="file" name="image"><br><br>
-            <input type="submit" value="Save" style="font-size: 20px;">
-        </form>
-
-    
-
+            </select><br><br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Upload:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+           <br> &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<input type="file" name="image"><br><br>
+            <input type="submit" value="Save" style="font-size: 15px;">&nbsp&nbsp
+            <button type="submit" style="font-size: 15px;"><a href="menue page.php">Back</a></button>
+        </form> 
     </center>
-    
+    </body>
+
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the form data
@@ -54,7 +51,7 @@
                 move_uploaded_file($file_tmp, $file_name);
             }
 
-            $stmt = $conn->prepare("INSERT INTO `menu` (`title`, `price`, `image`, `type`) VALUES (?,?,?,?)");
+            $stmt = $conn->prepare("INSERT INTO menu (title, price, image, type) VALUES (?,?,?,?)");
 
             // Bind parameters to the statement
             $stmt->bind_param("ssss", $_POST["title"], $_POST["price"] , $file_name, $_POST["type"] );
@@ -65,4 +62,3 @@
         }
 
      ?>
-</body>

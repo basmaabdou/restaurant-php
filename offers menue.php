@@ -1,4 +1,10 @@
-<?php require('./includes/server.php');?>
+<?php require('./includes/server.php');
+// $sql_create_db = "CREATE DATABASE restaurant";
+mysqli_select_db($conn, "restaurant");
+$sql = "CREATE TABLE offers (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    )";
+?>
 <html>
 
 <head>
@@ -17,54 +23,31 @@
     <center>
         <h1>Mac offers</h1>
     </center><br><br>
-    <div class="row">
-        <div class="col-4"><img src="photo/o1.jfif" width="300px" height="170px"></div>
-        <div class="col-4"><img src="photo/o2.jfif" width="300px" height="160px"></div>
-        <div class="col-4"><img src="photo/o3.jfif" width="300px" height="170px"></div><br>
-    </div><br>
+    <?php
+                $hostname = "localhost";
+                $dbname = "restaurant";
+                $username = "root";
+                $password = "";
+                
+                try {
+                $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+                } catch (PDOException $e) {
+                echo "Error connecting to database: " . $e->getMessage();
+                }
 
-    <h3>
-        <div class="row">
-            <div class="col-4">offer 30% on happy meal</div>
-            <div class="col-4">offer 60%&enjoy with share box </div>
-            <div class="col-4">offer20% on the meal</div>
-        </div>
-    </h3><br><br>
+                $sql = "SELECT title, image FROM offers";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+    ?>
 
-    <div class="row">
-        <div class="col-4"><img src="photo/o9.jfif" width="300px" height="170px"></div>
-        <div class="col-4"><img src="photo/o6.jpeg" width="300px" height="160px"></div>
-        <div class="col-4"><img src="photo/o7.jpeg" width="300px" height="170px"></div><br>
-    </div><br>
-    <h2>
-        <div class="row">
-            <div class="col-4">sandwich cadeau with the meal</div>
-            <div class="col-4"> order&win the sandwich </div>
-            <div class="col-4"> frize and drink free</div>
-        </div>
-    </h2><br><br>
-    <div class="row">
-        <div class="col-3"></div>
-        <h1>
-            <div class="col-3"> </div>
-        </h1>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-
-    </div><br>
-
-    <div class="row">
-        <div class="col-4"><img src="photo/o8.jfif" width="300px" height="170px"></div>
-        <div class="col-4"><img src="photo/o5.jpeg" width="300px" height="160px"></div>
-        <div class="col-4"><img src="photo/off3.jfif" width="300px" height="170px"></div><br>
-    </div>
-    <h2>
-        <div class="row">
-            <div class="col-4">offer50% on th meal</div>
-            <div class="col-4">ice cream cadeau on the meal </div>
-            <div class="col-4">coolect 450 point and win the meal</div>
-        </div>
-    </h2>
+<?php foreach ($stmt as $row ) {?>
+                 <div style="display:inline-block; margin-right:20px;  ">
+                 <img src="<?php echo $row['image']  ?>" height="200px" width="350px"> <br>
+                <div  style="font-size: 25px;"><?php echo '&nbsp&nbsp&nbsp ' . $row['title']  ?> <br></div>
+                  <br><br><br>
+     </div>
+            <?php } ?>
+            
 
     <div class="row">
         <div class="col-3">
@@ -83,6 +66,12 @@
                     height="50px"></a>
         </div><br>
     </div>
+    <div style="font-size: 30px;">
+            <a href="addOffer.php" role="button" target="_self">Add</a>
+            <a href="updateOffer.php" role="button" target="_self">Update</a>
+            <a href="deleteOffer.php" role="button" target="_self">Delete</a></div>
+        </div>
+    
 </body>
 
 </html>

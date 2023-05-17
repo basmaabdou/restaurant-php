@@ -1,0 +1,19 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+h2 {
+    color: #76a9f5;
+    background: rgb(0, 0, 0, .5);
+    width: 360px;
+    height: 450px;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 30px;
+    padding-top: 50px;
+}
